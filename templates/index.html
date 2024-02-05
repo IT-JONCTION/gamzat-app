@@ -1,0 +1,154 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Statistiques du jour
+{% endblock %}
+
+    <main>
+      {% block main %}
+      <form action="/index" method="post">
+        <section>
+          <h1>Statistiques du jour</h1>
+
+          <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="text-start">Agent</th>
+                    <th class="text-end">Contrat</th>
+                    <th class="text-end">Nombre des tickets le matin</th>
+                    <th class="text-end">Nombre des tickets le soir</th>
+                    <th class="text-end">Difference</th>
+                </tr>
+            </thead>
+          <tbody>
+
+                    <tr>
+                        <td class="text-start">Vérification</td>
+                        <td class="text-end">
+                          <ul>
+                            <li>Feider</li>
+                            <li>Autres contrats</li>
+                          </ul>
+                        </td>
+                        <td class="text-end">
+                          <ul>
+                            <li>{{ verif_feider_morning }}</li>
+                            <li>{{ verif_others_morning }}</li>
+                          </ul>
+                        </td>
+                        <td class="text-end">
+                          <ul>
+                            <li>{{ verif_feider_evening }}</li>
+                            <li>{{ verif_others_evening }}</li>
+                          </ul>
+                        </td>
+                        <td class="text-end">
+                          <ul>
+                            <li>{{ verif_feider_difference }}</li>
+                            <li>{{ verif_others_difference }}</li>
+                          </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">Administratif</td>
+                      <td class="text-end">
+                        <ul>
+                          <li>Feider</li>
+                          <li>Autres contrats</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>{{ admin_feider_morning }}</li>
+                          <li>{{ admin_others_morning }}</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>{{ admin_feider_evening }}</li>
+                          <li>{{ admin_others_evening }}</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>{{ admin_feider_difference }}</li>
+                          <li>{{ admin_others_difference }}</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">Technique</td>
+                      <td class="text-end">
+                        <ul>
+                          <li>Feider</li>
+                          <li>Autres contrats</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>{{ tech_feider_morning }}</li>
+                          <li>{{ tech_others_morning }}</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>{{ tech_feider_evening }}</li>
+                          <li>{{ tech_others_evening }}</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>{{ tech_feider_difference }}</li>
+                          <li>{{ tech_others_difference }}</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-start">Pièces</td>
+                      <td class="text-end">
+                        <ul>
+                          <li>Feider</li>
+                          <li>Autres contrats</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>{{ pieces_feider_morning }}</li>
+                          <li>{{ pieces_others_morning }}</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>{{ pieces_feider_evening }}</li>
+                          <li>{{ pieces_others_evening }}</li>
+                        </ul>
+                      </td>
+                      <td class="text-end">
+                        <ul>
+                          <li>{{ pieces_feider_difference }}</li>
+                          <li>{{ pieces_others_difference }}</li>
+                        </ul>
+                      </td>
+                    </tr>
+
+            </tbody>
+            <tfoot>
+              <tr>
+                  <td class="border-0 fw-bold text-start" colspan="1">Total global</td>
+                  <td class="border-0 text-end"></td>
+                  <td class="border-0 text-end">{{ total_tickets_morning }}</td>
+                  <td class="border-0 text-end">{{ total_tickets_evening }}</td>
+                  <td class="border-0 text-end">{{ total_tickets_difference }}</td>
+              </tr>
+              <tr>
+                <td class="border-0 fw-bold text-start" colspan="1">Nombre de tickets crées</td>
+                <td class="border-0 text-end" colspan="4">{{ tickets_created_today }}</td>
+              </tr>
+
+          </tfoot>
+
+          </table>
+        </section>
+      {% endblock %}
+    </main>
+
