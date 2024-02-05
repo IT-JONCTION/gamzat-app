@@ -173,18 +173,56 @@ def index():
 @app.route("/dashboards")
 def dashboards():
 
+    # create a database in sqlite3
+    db_connection = sqlite3.connect("/workspaces/gamzat-app/db/support_tickets.db")
+    cursor = db_connection.cursor()
+
+    # create tickets table in sql
+    db_creation = """CREATE TABLE IF NOT EXISTS tickets (
+    id INTEGER PRIMARY KEY NOT NULL,
+    date_of_creation DATE NOT NULL, 
+    tickets_qty INT NOT NULL
+    )"""
+
+    cursor.execute(db_creation)
+    db_connection.commit()
+
+    #  the code below is used once to feed sql db with past data and is should not be used only once, during app deployment
+    # ---------------------------------------------------------------------------------------------------------------------
+    # # Function to extract date from datetime string
+    # def extract_date(datetime_str):
+    #     return pd.to_datetime(datetime_str, format='%Y-%m-%d %H:%M:%S')
+
+    # # Read CSV file into a pandas DataFrame
+    # csv_file = "/workspaces/gamzat-app/db/05.02.2023_ae.csv"
+    # df = pd.read_csv(csv_file, parse_dates=['creation_date'], date_parser=extract_date)
+
+    # # Group by date and count the number of rows for each date
+    # daily_counts = df.groupby(df['creation_date'].dt.date).size().reset_index(name='tickets_qty')
+
+    # # Insert data into daily_stats table
+    # for index, row in daily_counts.iterrows():
+    #     cursor.execute("INSERT INTO tickets (date_of_creation, tickets_qty) VALUES (?, ?)",
+    #                 (str(row['creation_date']), row['tickets_qty']))
+
+    # # Commit changes and close connection
+    # db_connection.commit()
+
+    # -------------------------------------------------------------------------------------------------------------------
+    db_connection.close()
+
     # connect to the db
-    db_connection = sqlite3.connect('/workspaces/gamzat-app/db/support_tickets_daily_stats.db')
+    db_connection = sqlite3.connect('/workspaces/gamzat-app/db/support_tickets.db')
     cursor = db_connection.cursor()
 
     # get today's ticket qty
-    cursor.execute("SELECT date_of_creation FROM daily_stats")
+    cursor.execute("SELECT date_of_creation FROM tickets")
     dates_list = []
     check = cursor.fetchall()  # Fetch the result and get the count value
     for i in check:
         dates_list.append(i[0])
 
-    cursor.execute("SELECT tickets_qty FROM daily_stats")
+    cursor.execute("SELECT tickets_qty FROM tickets")
     tickets_list = []
     check2 = cursor.fetchall()  # Fetch the result and get the count value
     for i in check2:
