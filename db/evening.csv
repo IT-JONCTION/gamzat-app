@@ -786,8 +786,8 @@ id,creation_date,ref,id_arbo,marque,statuts,types,contrat,"type ticket",pseudo
 521153,"2024-02-05 14:38:32",82248121,39,STERWINS,"La réparation s'est bien passée. Un certificat de diagnostic est disponible en pièce jointe à gauche. ","Réparation sous garantie","LEROY MERLIN FR - STERWINS","Demande de réparation en station.","02 - Agent Administratif SWAP"
 521155,"2024-02-05 14:54:02",82248122,35,STERWINS,"La station doit faire un diagnostic de la machine.","Réparation sous garantie","LEROY MERLIN FR - STERWINS","Demande de réparation en station.",Roulio
 521160,"2024-02-05 15:11:34","CSP2525 (PN2500-2A)",39,BRICOMARCHE,"La station doit faire un diagnostic de la machine.",NULL,"BCM Johnwin","Demande de Garantie","01 - Agent Technique SWAP"
-521208,"2024-02-05 16:13:59",HTRT42-1,35,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
-521209,"2024-02-05 16:21:32",ABW-VBR-80P,104,FOXTER,"La station doit faire un diagnostic de la machine.",NULL,"NHP FOXTER - LECLERC","Demande de Garantie","03 - Agent Vérification SWAP"
-521210,"2024-02-05 16:23:22",HTRT5850,35,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","03 - Agent Vérification SWAP"
-521211,"2024-02-05 16:24:23","IRIYA FLUIDE",648,GOODHOME,"La station doit faire un diagnostic de la machine.",NULL,GOODHOME,"Demande de Garantie","03 - Agent Vérification SWAP"
-521213,"2024-02-05 17:04:14",HTRT65-2C,35,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","03 - Agent Vérification SWAP"
+521208,"2024-02-06 16:13:59",HTRT42-1,35,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","01 - Agent Technique SWAP"
+521209,"2024-02-06 16:21:32",ABW-VBR-80P,104,FOXTER,"La station doit faire un diagnostic de la machine.",NULL,"NHP FOXTER - LECLERC","Demande de Garantie","03 - Agent Vérification SWAP"
+521210,"2024-02-06 16:23:22",HTRT5850,35,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","03 - Agent Vérification SWAP"
+521211,"2024-02-06 16:24:23","IRIYA FLUIDE",648,GOODHOME,"La station doit faire un diagnostic de la machine.",NULL,GOODHOME,"Demande de Garantie","03 - Agent Vérification SWAP"
+521213,"2024-02-06 17:04:14",HTRT65-2C,35,HYUNDAI,"La station doit faire un diagnostic de la machine.",NULL,"BUILDER / TCK","Demande de Garantie","03 - Agent Vérification SWAP"

@@ -194,7 +194,7 @@ def dashboards():
     #     return pd.to_datetime(datetime_str, format='%Y-%m-%d %H:%M:%S')
 
     # # Read CSV file into a pandas DataFrame
-    # csv_file = "/workspaces/gamzat-app/db/05.02.2023_ae.csv"
+    # csv_file = "/workspaces/gamzat-app/db/06.02.2023_ae.csv"
     # df = pd.read_csv(csv_file, parse_dates=['creation_date'], date_parser=extract_date)
 
     # # Group by date and count the number of rows for each date
@@ -235,6 +235,18 @@ def dashboards():
 @app.route("/distributor")
 def distributor():
     return render_template("distributor.html")
+
+@app.route("/agent_v")
+def agent_v():
+    return render_template("agent_v.html")
+
+@app.route("/agent_a")
+def agent_a():
+    return render_template("agent_a.html")
+
+@app.route("/agent_t")
+def agent_t():
+    return render_template("agent_t.html")
 
 @app.errorhandler(404)
 def pageNotFound(error):
